@@ -1,6 +1,7 @@
 package entities;
 
 public class AvaliacaoEspecializada extends Avaliacao {
+	//Atributos 
 	private Double notaNarrativa;
 	private Double notaDirecaoDoJogo;
 	private Double notaDirecaoDeArte;
@@ -8,6 +9,7 @@ public class AvaliacaoEspecializada extends Avaliacao {
 	private Double notaDirecaoDeAudio;
 	private Double notaGameplay;
 	
+	//Construtores
 	public AvaliacaoEspecializada() {
 		super();
 	}
@@ -24,6 +26,7 @@ public class AvaliacaoEspecializada extends Avaliacao {
 		calcularNota();
 	}
 	
+	//Getters & Setters
 	public Double getNotaNarrativa() {
 		return notaNarrativa;
 	}
@@ -78,6 +81,7 @@ public class AvaliacaoEspecializada extends Avaliacao {
 		calcularNota();
 	}
 
+	//Metodos
 	@Override
 	public void calcularNota() {
 		double mediaNotas = (notaNarrativa + notaDirecaoDoJogo + notaDirecaoDeArte + notaMusicaDoJogo + notaDirecaoDeAudio + notaGameplay) / 6;

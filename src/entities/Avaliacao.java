@@ -10,7 +10,7 @@ public abstract class Avaliacao {
 	protected Review review;
 	protected TempoParaTerminar tempoParaTerminar;
 	
-	//Construtores com sobrecarga
+	//Construtores
 	public Avaliacao() {
 		
 	}

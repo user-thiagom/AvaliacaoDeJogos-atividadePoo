@@ -1,16 +1,19 @@
 package entities;
 
 public class Review {
+	//Atributos
 	private Integer id;
 	private String titulo;
 	private String texto;
 	
+	//Construtor
 	public Review(Integer id, String titulo, String texto) {
 		this.id = id;
 		this.titulo = titulo;
 		this.texto = texto;
 	}
 
+	//Getters & Setters
 	public Integer getId() {
 		return id;
 	}

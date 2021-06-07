@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import entities.enums.ClassificacaoIndicativa;
 import entities.enums.Genero;
 
 public class Jogo {
@@ -19,6 +20,7 @@ public class Jogo {
 	private List<Genero> generos;
 	private Plataforma plataforma;
 	private List<Avaliacao> avaliacoes;
+	private ClassificacaoIndicativa classificacaoIndicativa;
 	
 	//Construtores
 	public Jogo() {
@@ -26,17 +28,19 @@ public class Jogo {
 		this.avaliacoes = new ArrayList<>();
 	}
 
-	public Jogo(Integer id, String nome, Double notaDosCriticos, Double notaDosJogadores, Date dataDeLancamento,Plataforma plataforma) {
+	public Jogo(Integer id, String nome, Double notaDosCriticos, Double notaDosJogadores, Date dataDeLancamento,Plataforma plataforma, ClassificacaoIndicativa classificacaoIndicativa) {
 		this.id = id;
 		this.nome = nome;
 		this.notaDosCriticos = notaDosCriticos;
 		this.notaDosJogadores = notaDosJogadores;
 		this.dataDeLancamento = dataDeLancamento;
 		this.plataforma = plataforma;
+		this.classificacaoIndicativa = classificacaoIndicativa;
 		this.generos = new ArrayList<>();
 		this.avaliacoes = new ArrayList<>();
 	}
-
+	
+	//Getters & Setters
 	public Integer getId() {
 		return id;
 	}
@@ -84,6 +88,14 @@ public class Jogo {
 	public void setPlataforma(Plataforma plataforma) {
 		this.plataforma = plataforma;
 	}
+	
+	public ClassificacaoIndicativa getClassificacaoIndicativa() {
+		return classificacaoIndicativa;
+	}
+
+	public void setClassificacaoIndicativa(ClassificacaoIndicativa classificacaoIndicativa) {
+		this.classificacaoIndicativa = classificacaoIndicativa;
+	}
 
 	public List<Genero> getGeneros() {
 		return generos;
@@ -93,6 +105,7 @@ public class Jogo {
 		return avaliacoes;
 	}
 	
+	//Metodos
 	public void addAvaliacao(Avaliacao avaliacao) {
 		avaliacoes.add(avaliacao);
 		atualizarNotaCriticos();

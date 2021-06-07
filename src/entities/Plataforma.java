@@ -1,9 +1,11 @@
 package entities;
 
 public abstract class Plataforma {
+	//Atributos
 	private Integer id;
 	private String nome;
 	
+	//Construtores
 	public Plataforma() {
 		super();
 	}
@@ -13,6 +15,7 @@ public abstract class Plataforma {
 		this.nome = nome;
 	}
 
+	//Getters & Setters
 	public Integer getId() {
 		return id;
 	}
