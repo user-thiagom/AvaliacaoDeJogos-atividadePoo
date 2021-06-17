@@ -7,21 +7,19 @@ public class AvaliacaoEspecializada extends Avaliacao {
 	private Double notaDirecaoDeArte;
 	private Double notaMusicaDoJogo;
 	private Double notaDirecaoDeAudio;
-	private Double notaGameplay;
 	
 	//Construtores
 	public AvaliacaoEspecializada() {
 		super();
 	}
 	
-	public AvaliacaoEspecializada(Integer id, Review review,TempoParaTerminar tempoParaTerminar, Double notaNarrativa, Double notaDirecaoDoJogo,Double notaDirecaoDeArte, Double notaMusicaDoJogo, Double notaDirecaoDeAudio, Double notaGameplay) {
+	public AvaliacaoEspecializada(Integer id, Review review,TempoParaTerminar tempoParaTerminar, Double notaNarrativa, Double notaDirecaoDoJogo,Double notaDirecaoDeArte, Double notaMusicaDoJogo, Double notaDirecaoDeAudio) {
 		super(id, review, tempoParaTerminar);
 		this.notaNarrativa = notaNarrativa;
 		this.notaDirecaoDoJogo = notaDirecaoDoJogo;
 		this.notaDirecaoDeArte = notaDirecaoDeArte;
 		this.notaMusicaDoJogo = notaMusicaDoJogo;
 		this.notaDirecaoDeAudio = notaDirecaoDeAudio;
-		this.notaGameplay = notaGameplay;
 		this.avaliacaoEspecializada = true;
 		calcularNota();
 	}
@@ -33,7 +31,7 @@ public class AvaliacaoEspecializada extends Avaliacao {
 
 	public void setNotaNarrativa(Double notaNarrativa) {
 		this.notaNarrativa = notaNarrativa;
-		calcularNota();
+		//calcularNota();
 	}
 
 	public Double getNotaDirecaoDoJogo() {
@@ -42,7 +40,7 @@ public class AvaliacaoEspecializada extends Avaliacao {
 
 	public void setNotaDirecaoDoJogo(Double notaDirecaoDoJogo) {
 		this.notaDirecaoDoJogo = notaDirecaoDoJogo;
-		calcularNota();
+		//calcularNota();
 	}
 
 	public Double getNotaDirecaoDeArte() {
@@ -51,7 +49,7 @@ public class AvaliacaoEspecializada extends Avaliacao {
 
 	public void setNotaDirecaoDeArte(Double notaDirecaoDeArte) {
 		this.notaDirecaoDeArte = notaDirecaoDeArte;
-		calcularNota();
+		//calcularNota();
 	}
 
 	public Double getNotaMusicaDoJogo() {
@@ -60,7 +58,7 @@ public class AvaliacaoEspecializada extends Avaliacao {
 
 	public void setNotaMusicaDoJogo(Double notaMusicaDoJogo) {
 		this.notaMusicaDoJogo = notaMusicaDoJogo;
-		calcularNota();
+		//calcularNota();
 	}
 
 	public Double getNotaDirecaoDeAudio() {
@@ -69,22 +67,13 @@ public class AvaliacaoEspecializada extends Avaliacao {
 
 	public void setNotaDirecaoDeAudio(Double notaDirecaoDeAudio) {
 		this.notaDirecaoDeAudio = notaDirecaoDeAudio;
-		calcularNota();
-	}
-
-	public Double getNotaGameplay() {
-		return notaGameplay;
-	}
-
-	public void setNotaGameplay(Double notaGameplay) {
-		this.notaGameplay = notaGameplay;
-		calcularNota();
+		//calcularNota();
 	}
 
 	//Metodos
 	@Override
 	public void calcularNota() {
-		double mediaNotas = (notaNarrativa + notaDirecaoDoJogo + notaDirecaoDeArte + notaMusicaDoJogo + notaDirecaoDeAudio + notaGameplay) / 6;
+		double mediaNotas = (notaNarrativa + notaDirecaoDoJogo + notaDirecaoDeArte + notaMusicaDoJogo + notaDirecaoDeAudio) / 5;
 		this.nota = mediaNotas;
 	}
 	
@@ -99,7 +88,6 @@ public class AvaliacaoEspecializada extends Avaliacao {
 		builder.append("Direção de Arte("+String.format("%.2f",notaDirecaoDeArte)+")").append("\n");
 		builder.append("Direção de Audio("+String.format("%.2f",notaDirecaoDeAudio)+")").append("\n");
 		builder.append("Musica do Jogo("+String.format("%.2f",notaMusicaDoJogo)+")").append("\n");
-		builder.append("Gameplay("+String.format("%.2f",notaGameplay)+")").append("\n");
 		builder.append("").append("\n");
 		builder.append(review.getTitulo()).append("\n");
 		builder.append(review.getTexto()).append("\n");

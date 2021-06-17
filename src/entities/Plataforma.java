@@ -1,6 +1,6 @@
 package entities;
 
-public abstract class Plataforma {
+public class Plataforma {
 	//Atributos
 	private Integer id;
 	private String nome;

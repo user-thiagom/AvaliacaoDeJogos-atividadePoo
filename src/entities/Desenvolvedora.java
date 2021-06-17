@@ -52,5 +52,20 @@ public class Desenvolvedora {
 	public List<Jogo> getJogos() {
 		return jogos;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Desenvolvedora [id=");
+		builder.append(id);
+		builder.append(", nome=");
+		builder.append(nome);
+		builder.append(", nota=");
+		builder.append(nota);
+		builder.append(", jogos=");
+		builder.append(jogos);
+		builder.append("]");
+		return builder.toString();
+	}
 	
 }

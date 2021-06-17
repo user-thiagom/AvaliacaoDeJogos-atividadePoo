@@ -12,6 +12,9 @@ public class Review {
 		this.titulo = titulo;
 		this.texto = texto;
 	}
+	
+	public Review() {
+	}
 
 	//Getters & Setters
 	public Integer getId() {

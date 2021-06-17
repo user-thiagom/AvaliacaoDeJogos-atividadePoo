@@ -17,26 +17,25 @@ public class Jogo {
 	private Date dataDeLancamento;
 	
 	//Atributos de Associação
-	private List<Genero> generos;
+	private Genero genero;
 	private Plataforma plataforma;
 	private List<Avaliacao> avaliacoes;
-	private ClassificacaoIndicativa classificacaoIndicativa;
+	private Desenvolvedora desenvolvedora;
 	
 	//Construtores
 	public Jogo() {
-		this.generos = new ArrayList<>();
 		this.avaliacoes = new ArrayList<>();
 	}
 
-	public Jogo(Integer id, String nome, Double notaDosCriticos, Double notaDosJogadores, Date dataDeLancamento,Plataforma plataforma, ClassificacaoIndicativa classificacaoIndicativa) {
+	public Jogo(Integer id, String nome, Double notaDosCriticos, Double notaDosJogadores, Date dataDeLancamento,Plataforma plataforma, Genero genero, Desenvolvedora desenvolvedora) {
 		this.id = id;
 		this.nome = nome;
 		this.notaDosCriticos = notaDosCriticos;
 		this.notaDosJogadores = notaDosJogadores;
 		this.dataDeLancamento = dataDeLancamento;
 		this.plataforma = plataforma;
-		this.classificacaoIndicativa = classificacaoIndicativa;
-		this.generos = new ArrayList<>();
+		this.genero = genero;
+		this.desenvolvedora = desenvolvedora;
 		this.avaliacoes = new ArrayList<>();
 	}
 	
@@ -88,17 +87,21 @@ public class Jogo {
 	public void setPlataforma(Plataforma plataforma) {
 		this.plataforma = plataforma;
 	}
+
+	public Genero getGenero() {
+		return genero;
+	}
 	
-	public ClassificacaoIndicativa getClassificacaoIndicativa() {
-		return classificacaoIndicativa;
+	public void setGenero(Genero genero) {
+		this.genero = genero;
 	}
 
-	public void setClassificacaoIndicativa(ClassificacaoIndicativa classificacaoIndicativa) {
-		this.classificacaoIndicativa = classificacaoIndicativa;
+	public Desenvolvedora getDesenvolvedora() {
+		return desenvolvedora;
 	}
 
-	public List<Genero> getGeneros() {
-		return generos;
+	public void setDesenvolvedora(Desenvolvedora desenvolvedora) {
+		this.desenvolvedora = desenvolvedora;
 	}
 
 	public List<Avaliacao> getAvaliacoes() {
@@ -114,10 +117,6 @@ public class Jogo {
 	
 	public void removerAvaliacaoPorId(int id) {
 		avaliacoes.removeIf(x -> x.getId() == id);
-	}
-	
-	public void addGenero(Genero genero) {
-		generos.add(genero);
 	}
 	
 	public void removerGenero(Genero genero) {
@@ -143,4 +142,31 @@ public class Jogo {
 		double nota = sum / notasJogadores.size();
 		this.notaDosJogadores = nota;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Jogo [id=");
+		builder.append(id);
+		builder.append(", nome=");
+		builder.append(nome);
+		builder.append(", notaDosCriticos=");
+		builder.append(notaDosCriticos);
+		builder.append(", notaDosJogadores=");
+		builder.append(notaDosJogadores);
+		builder.append(", dataDeLancamento=");
+		builder.append(dataDeLancamento);
+		builder.append(", genero=");
+		builder.append(genero);
+		builder.append(", plataforma=");
+		builder.append(plataforma);
+		builder.append(", avaliacoes=");
+		builder.append(avaliacoes);
+		builder.append(", desenvolvedora=");
+		builder.append(desenvolvedora);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
 }

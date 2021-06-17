@@ -62,6 +62,22 @@ public abstract class Avaliacao {
 		this.avaliacaoEspecializada = avaliacaoEspecializada;
 	}
 	
+	public Review getReview() {
+		return review;
+	}
+
+	public void setReview(Review review) {
+		this.review = review;
+	}
+
+	public TempoParaTerminar getTempoParaTerminar() {
+		return tempoParaTerminar;
+	}
+
+	public void setTempoParaTerminar(TempoParaTerminar tempoParaTerminar) {
+		this.tempoParaTerminar = tempoParaTerminar;
+	}
+
 	//Métodos
 	public abstract void calcularNota();
 

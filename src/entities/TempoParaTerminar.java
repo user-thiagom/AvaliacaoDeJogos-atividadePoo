@@ -12,6 +12,10 @@ public class TempoParaTerminar {
 		this.horas = horas;
 		this.todasConquistas = todasConquistas;
 	}
+	
+	public TempoParaTerminar() {
+		
+	}
 
 	//Getters & Setters
 	public Integer getId() {
