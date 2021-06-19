@@ -16,6 +16,12 @@ public class Desenvolvedora {
 	public Desenvolvedora() {
 		jogos = new ArrayList<>();
 	}
+	
+	public Desenvolvedora(String nome, Double nota) {
+		this.nome = nome;
+		this.nota = nota;
+		jogos = new ArrayList<>();
+	}
 
 	public Desenvolvedora(Integer id, String nome, Double nota) {
 		this.id = id;
@@ -56,15 +62,8 @@ public class Desenvolvedora {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Desenvolvedora [id=");
 		builder.append(id);
-		builder.append(", nome=");
-		builder.append(nome);
-		builder.append(", nota=");
-		builder.append(nota);
-		builder.append(", jogos=");
-		builder.append(jogos);
-		builder.append("]");
+		builder.append(", " + nome);
 		return builder.toString();
 	}
 	

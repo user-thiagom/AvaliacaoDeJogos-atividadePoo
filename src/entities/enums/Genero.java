@@ -3,16 +3,7 @@ package entities.enums;
 public enum Genero {
 	ACAO,
 	AVENTURA,
-	MULTIPLAYER,
-	MUNDO_ABERTO,
 	LUTA,
-	FPS,
-	CORRIDA,
-	VOO,
-	PLATAFORMA,
+	TIRO,
 	RPG,
-	SIMULACAO,
-	ESPORTES,
-	ESTRATEGIA,
-	TPS
 }

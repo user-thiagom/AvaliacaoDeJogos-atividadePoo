@@ -171,7 +171,7 @@ public class JogoDaoJDBC implements JogoDao {
 		ResultSet rs = null;
 		try {
 			st = conn.prepareStatement(
-					"SELECT * FROM jogo order by nome"
+					"SELECT * FROM jogo order by id"
 					);
 			rs = st.executeQuery();
 

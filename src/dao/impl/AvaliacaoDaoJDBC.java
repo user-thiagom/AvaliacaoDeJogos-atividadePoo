@@ -32,7 +32,7 @@ public class AvaliacaoDaoJDBC implements AvaliacaoDao {
 				AvaliacaoEspecializada objEsp = (AvaliacaoEspecializada) obj;
 				st = conn.prepareStatement(
 						"INSERT INTO avalicao " +
-					    "(nota, isAvaliacaoEsp, titulo, texto, horas, todasAsConquistas, notaNarrativa, notaDirecaoJogo, notaDirecaoDeArte, notaMusicaDoJogo, notaDirecaoDeAudio, fk_Jogo_id) " +
+					    "(isAvaliacaoEsp, titulo, texto, horas, todasAsConquistas, notaNarrativa, notaDirecaoJogo, notaDirecaoDeArte, notaMusicaDoJogo, notaDirecaoDeAudio, fk_Jogo_id) " +
 						"VALUES " +
 					    "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 					);

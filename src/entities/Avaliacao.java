@@ -14,6 +14,20 @@ public abstract class Avaliacao {
 	public Avaliacao() {
 		
 	}
+	
+	public Avaliacao(Double nota, Boolean avaliacaoEspecializada, Review review, TempoParaTerminar tempoParaTerminar) {
+		this.nota = nota;
+		this.avaliacaoEspecializada = avaliacaoEspecializada;
+		this.review = review;
+		this.tempoParaTerminar = tempoParaTerminar;
+	}
+
+	public Avaliacao(Boolean avaliacaoEspecializada, Review review, TempoParaTerminar tempoParaTerminar) {
+		super();
+		this.avaliacaoEspecializada = avaliacaoEspecializada;
+		this.review = review;
+		this.tempoParaTerminar = tempoParaTerminar;
+	}
 
 	public Avaliacao(Integer id, Review review, TempoParaTerminar tempoParaTerminar) {
 		this.id = id;

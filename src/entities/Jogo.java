@@ -26,6 +26,18 @@ public class Jogo {
 	public Jogo() {
 		this.avaliacoes = new ArrayList<>();
 	}
+	
+	public Jogo(String nome, Double notaDosCriticos, Double notaDosJogadores, Date dataDeLancamento, Genero genero,
+			Plataforma plataforma, Desenvolvedora desenvolvedora) {
+		this.nome = nome;
+		this.notaDosCriticos = notaDosCriticos;
+		this.notaDosJogadores = notaDosJogadores;
+		this.dataDeLancamento = dataDeLancamento;
+		this.genero = genero;
+		this.plataforma = plataforma;
+		this.desenvolvedora = desenvolvedora;
+		this.avaliacoes = new ArrayList<>();
+	}
 
 	public Jogo(Integer id, String nome, Double notaDosCriticos, Double notaDosJogadores, Date dataDeLancamento,Plataforma plataforma, Genero genero, Desenvolvedora desenvolvedora) {
 		this.id = id;
@@ -146,25 +158,8 @@ public class Jogo {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Jogo [id=");
 		builder.append(id);
-		builder.append(", nome=");
-		builder.append(nome);
-		builder.append(", notaDosCriticos=");
-		builder.append(notaDosCriticos);
-		builder.append(", notaDosJogadores=");
-		builder.append(notaDosJogadores);
-		builder.append(", dataDeLancamento=");
-		builder.append(dataDeLancamento);
-		builder.append(", genero=");
-		builder.append(genero);
-		builder.append(", plataforma=");
-		builder.append(plataforma);
-		builder.append(", avaliacoes=");
-		builder.append(avaliacoes);
-		builder.append(", desenvolvedora=");
-		builder.append(desenvolvedora);
-		builder.append("]");
+		builder.append(", " + nome);
 		return builder.toString();
 	}
 	

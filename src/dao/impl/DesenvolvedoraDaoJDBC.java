@@ -91,7 +91,7 @@ public class DesenvolvedoraDaoJDBC implements DesenvolvedoraDao {
 		ResultSet rs = null;
 		try {
 			st = conn.prepareStatement(
-				"SELECT * FROM desenvolvedora ORDER BY nome");
+				"SELECT * FROM desenvolvedora ORDER BY id");
 			rs = st.executeQuery();
 
 			List<Desenvolvedora> list = new ArrayList<>();

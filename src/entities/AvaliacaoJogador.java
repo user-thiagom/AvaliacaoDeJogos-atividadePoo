@@ -9,6 +9,12 @@ public class AvaliacaoJogador extends Avaliacao {
 		super();
 	}
 	
+	public AvaliacaoJogador(Double nota, Boolean avaliacaoEspecializada, Review review,
+			TempoParaTerminar tempoParaTerminar, Boolean recomenda) {
+		super(nota, avaliacaoEspecializada, review, tempoParaTerminar);
+		this.recomenda = recomenda;
+	}
+
 	public AvaliacaoJogador(Integer id, Double nota, Review review,TempoParaTerminar tempoParaTerminar, Boolean recomenda) {
 		super(id, nota, review, tempoParaTerminar);
 		this.recomenda = recomenda;

@@ -29,9 +29,9 @@ public class Program3 {
 		System.out.println("--- Teste 3: Avaliação Insert ---");
 		Review review = new Review(null, "GoTY!", "Jogo Bom demais, valeu cada minuto investido, ótimo gráfico, animações espetaculares, multiplayer divertido");
 		TempoParaTerminar tempoParaTerminar = new TempoParaTerminar(null, 3, false);
-		Avaliacao newAv = new AvaliacaoEspecializada(null, review, tempoParaTerminar, 3.5, 2.0, 5.1, 1.3, 4.33);
-		avDao.insert(newAv, 3);
-		System.out.println("Inserido! novo id = " + newAv.getId());
+		//Avaliacao newAv = new AvaliacaoEspecializada(null, review, tempoParaTerminar, 3.5, 2.0, 5.1, 1.3, 4.33);
+		//avDao.insert(newAv, 3);
+		//System.out.println("Inserido! novo id = " + newAv.getId());
 		
 		System.out.println("--- Teste 4: Jogo Delete ---");
 		System.out.println("Digite um código");

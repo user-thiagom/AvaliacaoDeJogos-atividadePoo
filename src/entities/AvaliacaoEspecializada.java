@@ -13,6 +13,18 @@ public class AvaliacaoEspecializada extends Avaliacao {
 		super();
 	}
 	
+	public AvaliacaoEspecializada(Boolean avaliacaoEspecializada, Review review,
+			TempoParaTerminar tempoParaTerminar, Double notaNarrativa, Double notaDirecaoDoJogo,
+			Double notaDirecaoDeArte, Double notaMusicaDoJogo, Double notaDirecaoDeAudio) {
+		super(avaliacaoEspecializada, review, tempoParaTerminar);
+		this.notaNarrativa = notaNarrativa;
+		this.notaDirecaoDoJogo = notaDirecaoDoJogo;
+		this.notaDirecaoDeArte = notaDirecaoDeArte;
+		this.notaMusicaDoJogo = notaMusicaDoJogo;
+		this.notaDirecaoDeAudio = notaDirecaoDeAudio;
+		this.calcularNota();
+	}
+
 	public AvaliacaoEspecializada(Integer id, Review review,TempoParaTerminar tempoParaTerminar, Double notaNarrativa, Double notaDirecaoDoJogo,Double notaDirecaoDeArte, Double notaMusicaDoJogo, Double notaDirecaoDeAudio) {
 		super(id, review, tempoParaTerminar);
 		this.notaNarrativa = notaNarrativa;
@@ -31,7 +43,7 @@ public class AvaliacaoEspecializada extends Avaliacao {
 
 	public void setNotaNarrativa(Double notaNarrativa) {
 		this.notaNarrativa = notaNarrativa;
-		//calcularNota();
+		calcularNota();
 	}
 
 	public Double getNotaDirecaoDoJogo() {
@@ -40,7 +52,7 @@ public class AvaliacaoEspecializada extends Avaliacao {
 
 	public void setNotaDirecaoDoJogo(Double notaDirecaoDoJogo) {
 		this.notaDirecaoDoJogo = notaDirecaoDoJogo;
-		//calcularNota();
+		calcularNota();
 	}
 
 	public Double getNotaDirecaoDeArte() {
@@ -49,7 +61,7 @@ public class AvaliacaoEspecializada extends Avaliacao {
 
 	public void setNotaDirecaoDeArte(Double notaDirecaoDeArte) {
 		this.notaDirecaoDeArte = notaDirecaoDeArte;
-		//calcularNota();
+		calcularNota();
 	}
 
 	public Double getNotaMusicaDoJogo() {
@@ -58,7 +70,7 @@ public class AvaliacaoEspecializada extends Avaliacao {
 
 	public void setNotaMusicaDoJogo(Double notaMusicaDoJogo) {
 		this.notaMusicaDoJogo = notaMusicaDoJogo;
-		//calcularNota();
+		calcularNota();
 	}
 
 	public Double getNotaDirecaoDeAudio() {
@@ -67,7 +79,7 @@ public class AvaliacaoEspecializada extends Avaliacao {
 
 	public void setNotaDirecaoDeAudio(Double notaDirecaoDeAudio) {
 		this.notaDirecaoDeAudio = notaDirecaoDeAudio;
-		//calcularNota();
+		calcularNota();
 	}
 
 	//Metodos
